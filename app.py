@@ -1,3 +1,33 @@
-print("Welcome to my Python program!")
-hours = input("How many hours did you study today? ")
+# Chloe cunningham 
+# Python Github Project
+# Caffeine consumption calculator :)
+
+
+print("Welcome to my Python program assignment!")
+
+
+# Asking user for input
+# Using loop to reset info if user types an invalid entry
+while True:
+    often_coffee = input("How many cups of coffee do you roughly drink in a week? ")
+
+    try:
+        often_coffee = float(often_coffee)
+        break   # valid input, exit loop
+    except ValueError:
+        print("Invalid entry. Please enter a number!\n")
+
+
+# Response
+print("Got it! You drink", often_coffee, "cups of coffee a week.")
+
+
+# Calculate weekly consumption
+caffeine_per_cup = 95  # average mg of caffeine per cup
+weekly_caffeine = often_coffee * caffeine_per_cup
+
+# Output Results
+print("That equals roughly", weekly_caffeine, "mg of caffeine per week!")
+print ("Anything to stay awake at work huh..")
+
 
